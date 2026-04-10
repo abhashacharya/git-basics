@@ -13,10 +13,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="font-display text-xl font-bold text-foreground tracking-tight">
-          <span className="text-coral">Line</span>Academy
+          Sulove<span className="text-coral">.</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -24,14 +24,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-coral transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="bg-coral text-coral-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="bg-coral-gradient text-coral-foreground px-5 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-coral-sm"
           >
             Hire Me
           </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-background border-b border-border"
+            className="md:hidden overflow-hidden glass-strong"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -66,7 +66,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm font-medium text-muted-foreground hover:text-coral transition-colors"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
                 </a>
@@ -74,7 +74,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="bg-coral text-coral-foreground px-5 py-2 rounded-lg text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+                className="bg-coral-gradient text-coral-foreground px-5 py-2 rounded-xl text-sm font-semibold text-center hover:opacity-90 transition-opacity"
               >
                 Hire Me
               </a>

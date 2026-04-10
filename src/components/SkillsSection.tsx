@@ -14,8 +14,10 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="section-padding">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="section-padding relative">
+      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-coral/5 blur-3xl" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +25,7 @@ export default function SkillsSection() {
           className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight font-display">
-            My <span className="text-coral">Skills</span>
+            My <span className="text-gradient">Skills</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-lg mx-auto">
             A comprehensive toolkit built from years of hands-on digital marketing experience.
@@ -31,7 +33,7 @@ export default function SkillsSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-5">
+          <div className="glass-card rounded-2xl p-8 space-y-5">
             {skills.map((skill, i) => (
               <motion.div
                 key={skill.name}
@@ -50,7 +52,7 @@ export default function SkillsSection() {
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: i * 0.05 }}
-                    className="h-full bg-coral-gradient rounded-full"
+                    className="h-full bg-coral-gradient rounded-full glow-coral-sm"
                   />
                 </div>
               </motion.div>

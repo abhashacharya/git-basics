@@ -10,7 +10,7 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-secondary/50">
+    <section id="about" className="section-padding bg-mesh-alt relative">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -19,14 +19,16 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="flex justify-center"
         >
-          <img
-            src={aboutClipart}
-            alt="Creative digital marketing workspace"
-            loading="lazy"
-            width={800}
-            height={800}
-            className="w-full max-w-sm"
-          />
+          <div className="glass-card rounded-3xl p-6">
+            <img
+              src={aboutClipart}
+              alt="Creative digital marketing workspace"
+              loading="lazy"
+              width={800}
+              height={800}
+              className="w-full max-w-sm"
+            />
+          </div>
         </motion.div>
 
         <motion.div
@@ -36,10 +38,10 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight font-display">
-            About <span className="text-coral">Me</span>
+            About <span className="text-gradient">Me</span>
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            I'm a passionate digital marketing professional at Line Academy with expertise in crafting comprehensive marketing strategies. From SEO and content marketing to paid advertising and social media management, I bring a holistic approach to digital growth.
+            I'm a passionate digital marketing professional with expertise in crafting comprehensive marketing strategies. From SEO and content marketing to paid advertising and social media management, I bring a holistic approach to digital growth.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             My focus is on delivering data-driven results that make a real impact — growing audiences, increasing conversions, and building brand authority across all digital channels.
@@ -53,7 +55,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-card rounded-xl p-4 border border-border"
+                className="glass-card rounded-2xl p-4"
               >
                 <div className="text-2xl font-bold text-coral font-display">{stat.value}</div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>

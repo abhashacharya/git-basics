@@ -36,18 +36,20 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="section-padding bg-navy-gradient text-navy-foreground">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="section-padding bg-mesh relative">
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-display">
-            What I <span className="text-coral">Do</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight font-display">
+            What I <span className="text-gradient">Do</span>
           </h2>
-          <p className="mt-4 text-navy-foreground/70 max-w-lg mx-auto">
+          <p className="mt-4 text-muted-foreground max-w-lg mx-auto">
             Full-spectrum digital marketing services that drive real business results.
           </p>
         </motion.div>
@@ -60,11 +62,11 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="bg-navy-foreground/5 backdrop-blur-sm border border-navy-foreground/10 rounded-2xl p-6 hover:bg-navy-foreground/10 transition-colors group"
+              className="glass-card rounded-2xl p-6 hover:bg-input transition-all group hover:glow-coral-sm"
             >
               <div className="text-3xl mb-4">{service.icon}</div>
-              <h3 className="text-lg font-bold font-display mb-2">{service.title}</h3>
-              <p className="text-sm text-navy-foreground/70 leading-relaxed">{service.desc}</p>
+              <h3 className="text-lg font-bold font-display text-foreground mb-2">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -81,7 +83,7 @@ export default function ServicesSection() {
             loading="lazy"
             width={800}
             height={800}
-            className="w-full max-w-xs opacity-80"
+            className="w-full max-w-xs opacity-70"
           />
         </motion.div>
       </div>
