@@ -20,25 +20,24 @@ const withBase = (path: string) => {
 
 // Quick-edit section: update these values first for most profile/theme changes.
 const profile = {
-  name: "Sagun",
-  role: "Full Stack Developer",
+  name: "Abhash Acharya",
+  role: "Civil Engineering Educator & Transportation Researcher",
   location: "Nepal",
-  email: "hello@sagun.dev",
-  linkedin: "linkedin.com/in/sagun",
-  twitterHandle: "@sagun",
+  email: "acharyaabhash@gmail.com",
+  linkedin: "https://www.linkedin.com/in/abhashacharya/",
 };
 
 const socialLinks = {
-  linkedin: "https://linkedin.com/in/sagun",
-  github: "https://github.com/sagun",
-  twitter: "https://twitter.com/sagun",
+  linkedin: "https://www.linkedin.com/in/abhashacharya/",
+  googleScholar: "https://scholar.google.com/citations?user=YsJ0eIsAAAAJ&hl=en",
+  youtube: "https://www.youtube.com/@AbhashAcharya",
 };
 
 // Single source of truth for brand hue.
 // Change this one value to retheme all accent-driven UI parts.
-// Switched to a bluish-white direction per user request.
-const brandColor = "oklch(0.62 0.24 25)";
-const brandTextOnColor = "oklch(0.99 0.01 20)";
+// Using a strong blue and white palette for the new visual theme.
+const brandColor = "oklch(0.43 0.30 260)";
+const brandTextOnColor = "oklch(0.99 0 0)";
 
 const themeColors = {
   // Keep overrides minimal: all other tokens are derived from these in styles.css.
@@ -76,11 +75,10 @@ export const portfolioConfig: PortfolioConfig = {
     },
   },
   seo: {
-    title: `${profile.name} | Developer Portfolio`,
+    title: `${profile.name} | Civil Engineering Educator & Transportation Researcher`,
     description:
-      "Full Stack Developer building clean, performant web applications and digital products.",
+      "Civil engineering educator and transportation researcher focused on sustainable mobility, road safety, and infrastructure design in Nepal.",
     author: profile.name,
-    twitterSite: profile.twitterHandle,
     ogImage:
       "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8a26296c-4b36-46bf-829e-0469bb62ecf2/id-preview-6db04203--557eecb1-1f64-4c35-842e-6bd4d1e84a18.lovable.app-1775816077576.png",
   },
@@ -96,7 +94,7 @@ export const portfolioConfig: PortfolioConfig = {
       headingPrefix: "Hi, I'm",
       headingHighlight: profile.name,
       description:
-        "I build fast, scalable web applications with modern frontend and backend technologies.",
+        "I lead transportation research, civil engineering education, and infrastructure planning to deliver safer, sustainable mobility solutions.",
       primaryCta: {
         label: "Let's Connect",
         href: "#contact",
@@ -107,7 +105,7 @@ export const portfolioConfig: PortfolioConfig = {
       },
       image: {
         src: withBase("/images/hero-clipart.png"),
-        alt: "Developer illustration with modern software tooling icons",
+        alt: "Illustration representing academic research and transportation engineering",
         width: 1024,
         height: 1024,
       },
@@ -118,21 +116,21 @@ export const portfolioConfig: PortfolioConfig = {
       title: "About",
       titleHighlight: "Me",
       paragraphs: [
-        "I'm a developer focused on creating reliable, user-friendly applications with clean architecture and strong performance.",
-        "I enjoy turning ideas into products, from UI development to backend APIs, while keeping code maintainable and scalable.",
+        "I'm a civil engineer and educator specializing in transportation engineering, road safety, and infrastructure design.",
+        "As Head of the Civil Engineering Department, I blend academic leadership, research publications, and practical project delivery across Nepal.",
       ],
       image: {
-        src: withBase("/images/sulove-profile.jpeg"),
+        src: "https://abhashacharya.com.np/wp-content/uploads/2025/02/BT.jpg",
         alt: `${profile.name} - ${profile.role}`,
         width: 500,
         height: 600,
       },
       nameTag: profile.name,
       stats: [
-        { value: "4+", label: "Years Experience" },
-        { value: "30+", label: "Projects Built" },
-        { value: "15+", label: "Happy Clients" },
-        { value: "99%", label: "Delivery Rate" },
+        { value: "10+", label: "Years Experience" },
+        { value: "200+", label: "Students Taught" },
+        { value: "30+", label: "Research Papers Reviewed" },
+        { value: "100%", label: "Academic Focus" },
       ],
     },
     {
@@ -143,14 +141,14 @@ export const portfolioConfig: PortfolioConfig = {
       subtitle:
         "A modern engineering toolkit for shipping high-quality products.",
       items: [
-        { name: "JavaScript / TypeScript", level: 92 },
-        { name: "React & Next.js", level: 90 },
-        { name: "Node.js & APIs", level: 88 },
-        { name: "SQL & Databases", level: 84 },
-        { name: "UI/UX Implementation", level: 86 },
-        { name: "Testing & QA", level: 80 },
-        { name: "Cloud & Deployment", level: 78 },
-        { name: "System Design", level: 82 },
+        { name: "Transportation Engineering", level: 92 },
+        { name: "Civil Infrastructure Design", level: 90 },
+        { name: "Road Safety Analysis", level: 88 },
+        { name: "Traffic Modeling & Simulation", level: 86 },
+        { name: "Academic Leadership", level: 84 },
+        { name: "Research & Publication", level: 82 },
+        { name: "Project Feasibility", level: 80 },
+        { name: "Training & Workshops", level: 78 },
       ],
       image: {
         src: withBase("/images/skills-clipart.png"),
@@ -168,39 +166,39 @@ export const portfolioConfig: PortfolioConfig = {
         "End-to-end development services to take products from concept to launch.",
       items: [
         {
-          icon: "💻",
-          title: "Frontend Development",
-          desc: "Responsive, accessible interfaces with React, TypeScript, and modern UI tooling.",
+          icon: "🏫",
+          title: "Civil Engineering Education",
+          desc: "Develop and deliver courses, workshops, and training for engineering students and professionals.",
         },
         {
-          icon: "⚙️",
-          title: "Backend APIs",
-          desc: "Robust API design, authentication, and business logic implementation.",
+          icon: "🚦",
+          title: "Transportation Planning",
+          desc: "Traffic studies, mobility analysis, and evidence-based transport research for safer cities.",
         },
         {
-          icon: "🗄️",
-          title: "Database Design",
-          desc: "Efficient schemas, query optimization, and reliable data flows.",
+          icon: "🛣️",
+          title: "Infrastructure Design",
+          desc: "Road, intersection, and transport infrastructure design with practical feasibility and cost planning.",
         },
         {
-          icon: "🚀",
-          title: "Performance Optimization",
-          desc: "Speed, scalability, and code quality improvements for production systems.",
+          icon: "📚",
+          title: "Research & Publications",
+          desc: "Publish peer-reviewed papers, review journals, and support data-driven transportation policy.",
         },
         {
-          icon: "🔌",
-          title: "Integrations",
-          desc: "Third-party services, payment systems, and automation workflows.",
+          icon: "🧑‍🎓",
+          title: "Project Supervision",
+          desc: "Guide final year projects and academic research from concept through completion.",
         },
         {
-          icon: "🧪",
-          title: "Maintenance & Support",
-          desc: "Ongoing improvements, bug fixing, and long-term product stability.",
+          icon: "🤝",
+          title: "Consulting & Training",
+          desc: "Provide consulting, reporting, and capacity building in transport and civil engineering.",
         },
       ],
       image: {
         src: withBase("/images/services-clipart.png"),
-        alt: "Digital marketing tools",
+        alt: "Illustration representing civil engineering services and transportation planning",
         width: 800,
         height: 800,
       },
@@ -210,31 +208,31 @@ export const portfolioConfig: PortfolioConfig = {
       type: "experience",
       title: "My",
       titleHighlight: "Journey",
-      subtitle: "Building software products with impact and reliability.",
+      subtitle: "Leading civil engineering education, transport research, and infrastructure projects.",
       items: [
         {
-          year: "2024 - Present",
-          role: "Full Stack Developer",
-          company: "Freelance",
-          desc: "Delivering full-stack web solutions for startups and small businesses.",
+          year: "2023 - Present",
+          role: "Head of Department, Civil Engineering",
+          company: "Aryan School of Engineering",
+          desc: "Leading academic programs, research initiatives, and department operations.",
         },
         {
-          year: "2022 - 2024",
-          role: "Frontend Developer",
-          company: "Product Studio",
-          desc: "Built reusable UI systems and improved application performance and accessibility.",
+          year: "2020 - Present",
+          role: "Part-Time Faculty",
+          company: "Thapathali Campus & Other Engineering Colleges",
+          desc: "Teaching civil and transportation engineering courses to undergraduate students.",
         },
         {
-          year: "2021 - 2022",
-          role: "Web Developer",
-          company: "Tech Agency",
-          desc: "Implemented business websites and API integrations with clean deployment pipelines.",
+          year: "2018 - 2023",
+          role: "Lecturer / Year Coordinator",
+          company: "Universal Engineering and Science College",
+          desc: "Managed academics, student projects, and course delivery for engineering cohorts.",
         },
         {
-          year: "2020 - 2021",
-          role: "Junior Developer",
-          company: "Startup Team",
-          desc: "Contributed to feature development, debugging, and production support.",
+          year: "2018",
+          role: "Civil Engineer",
+          company: "Mudbhary and Joshi Construction Pvt. Ltd.",
+          desc: "Supported field engineering, site supervision, and construction project execution.",
         },
       ],
     },
@@ -244,7 +242,7 @@ export const portfolioConfig: PortfolioConfig = {
       title: "Let's",
       titleHighlight: "Talk",
       subtitle:
-        "Need a developer for your next product or feature? Let's build something great together.",
+        "Need an engineering educator, transport researcher, or infrastructure consultant? Let's connect.",
       cardTitle: "Send a Message",
       submitLabel: "Send Message",
       successMessage: "Thanks for your message. I will get back to you soon.",
@@ -266,8 +264,8 @@ export const portfolioConfig: PortfolioConfig = {
       type: "footer",
       socialLinks: [
         { label: "LinkedIn", href: socialLinks.linkedin },
-        { label: "GitHub", href: socialLinks.github },
-        { label: "Twitter", href: socialLinks.twitter },
+        { label: "Google Scholar", href: socialLinks.googleScholar },
+        { label: "YouTube", href: socialLinks.youtube },
       ],
       copyrightText: "All rights reserved.",
     },
